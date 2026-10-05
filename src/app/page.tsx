@@ -87,15 +87,36 @@ export default function Home() {
         "@type":"TravelAgency","name":"Wanofii Travel RAK","alternateName":["وانوفي للسفر","ዋኖፊ ጉዞ"],"description": L.heroSub, "address":{"@type":"PostalAddress","addressLocality":"Ras Al Khaimah","addressCountry":"AE"}, "areaServed":["AE","ET","SA"], "availableLanguage":["en","ar","am"]
       })}} />
 
-      <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/10 flex justify-between items-center p-4 max-w-7xl mx-auto">
-        <div className="text-xl font-black"><span className="text-[#D4AF37]">WANO</span>FII</div>
-        <div className="flex gap-2 items-center">
-          <div className="flex bg-white/10 rounded-full p-1 border border-white/20">
-            {(["en","ar","am"] as const).map(l=> <button key={l} onClick={()=>setLang(l)} className={`px-3 py-1 rounded-full text-[11px] font-black ${lang===l?"bg-[#D4AF37] text-black":"text-white/60"}`}>{l==="am"?"አማ":""}{l.toUpperCase()}</button>)}
-          </div>
-          <a href="https://wa.me/971501234567" className="bg-[#D4AF37] text-black px-4 py-2 rounded-full font-black text-xs">{L.cta}</a>
-        </div>
-      </nav>
+      <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur flex justify-between items-center p-4">
+  <div className="text-xl font-black">
+    <span>Wanofii</span>
+  </div>
+
+  <div className="flex gap-2 items-center">
+    <div className="flex bg-white/10 rounded-full p-1">
+      {(["en","ar","am"] as const).map(l=> (
+        <button key={l} onClick={()=>setLang(l)} className={`px-3 py-1 rounded-full text-sm ${lang===l ? 'bg-white text-black' : 'text-white'}`}>{l.toUpperCase()}</button>
+      ))}
+    </div>
+  </div>
+
+  {/* WhatsApp Button - RIGHT ALIGNED - FIXED */}
+  <div className="flex justify-end gap-3">
+    <a
+      href="https://wa.me/971569802812?text=Salam%20Wanofii%20I%20want%20to%20book%20from%20RAK"
+      target="_blank"
+      className="bg-green-500 text-white px-4 py-2 rounded-full font-bold text-sm"
+    >
+      WhatsApp
+    </a>
+    <a
+      href="mailto:sintsew0@gmail.com"
+      className="bg-white text-black px-4 py-2 rounded-full font-bold text-sm"
+    >
+      Email
+    </a>
+  </div>
+</nav>
 
       <section className="relative h-[78vh] flex items-center">
         <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600" alt="flights Dubai Ethiopia - Wanofii" className="absolute inset-0 w-full h-full object-cover" />

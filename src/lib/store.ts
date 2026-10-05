@@ -1,6 +1,6 @@
 export const defaultData = {
   password: "wanofii123",
-  whatsapp: "971501234567",
+  whatsapp: "971569802812",
   hero: {
     title: "Cheap Flights",
     gold: "Dubai to Ethiopia",
