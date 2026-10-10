@@ -31,7 +31,7 @@ main > section:first-of-type::after {
 
 main > section:first-of-type::before {
   content: "";
-  top: 18%;
+  top: 5%;
   left: -9rem;
   width: 7rem;
   height: 2px;
@@ -41,7 +41,7 @@ main > section:first-of-type::before {
 
 main > section:first-of-type::after {
   content: "✈";
-  top: calc(18% - 1.1rem);
+  top: calc(5% - 1.1rem);
   left: -2rem;
   color: #f3cf52;
   font-size: 1.8rem;
@@ -56,14 +56,14 @@ main > section:first-of-type > div:last-child {
 @keyframes wanofii-flight-crossing {
   0% {
     opacity: 0;
-    transform: translate(0, 7vh) rotate(-8deg);
+    transform: translate(0, 1vh) rotate(-8deg);
   }
   8%, 88% {
     opacity: 0.75;
   }
   100% {
     opacity: 0;
-    transform: translate(calc(100vw + 12rem), -3vh) rotate(-8deg);
+    transform: translate(calc(100vw + 12rem), -1vh) rotate(-8deg);
   }
 }
 
