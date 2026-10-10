@@ -74,3 +74,81 @@ main > section:first-of-type > div:last-child {
     opacity: 0;
   }
 }
+
+/* Phone portrait layout, including 9:16 screens. */
+@media (max-width: 640px) {
+  main {
+    overflow-x: clip;
+  }
+
+  main > nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.625rem 0.75rem;
+  }
+
+  main > nav > div:first-child {
+    min-width: 0;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  main > nav > div:first-child img {
+    width: 2.75rem;
+    height: 2.75rem;
+    object-fit: contain;
+  }
+
+  main > nav > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    flex-shrink: 0;
+  }
+
+  main > nav > div:last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  main > section:first-of-type {
+    height: auto;
+    min-height: 78vh;
+    min-height: 78svh;
+    padding-block: 3rem;
+  }
+
+  main > section:first-of-type > div:last-child {
+    padding-inline: 1.25rem;
+  }
+
+  main > section:first-of-type h1 {
+    font-size: clamp(2.125rem, 9.4vw, 3rem);
+    line-height: 0.98;
+    overflow-wrap: anywhere;
+  }
+
+  main > section:nth-of-type(2) > h2 {
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
+    line-height: 1.25;
+  }
+
+  main > section:nth-of-type(2) {
+    padding-inline: 1rem;
+  }
+
+  [role="dialog"] {
+    max-height: 90vh;
+    max-height: 90svh;
+    padding: 1rem;
+  }
+
+  footer {
+    padding-inline: 0.75rem;
+    overflow-wrap: anywhere;
+  }
+}
