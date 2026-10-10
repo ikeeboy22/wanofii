@@ -10,3 +10,67 @@ body {
   color: #ffffff;
   font-family: sans-serif;
 }
+
+/* A quiet animated flight across the homepage hero. */
+main > section:first-of-type {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+main > section:first-of-type::before,
+main > section:first-of-type::after {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  animation-duration: 24s;
+  animation-timing-function: linear;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: wanofii-flight-crossing;
+}
+
+main > section:first-of-type::before {
+  content: "";
+  top: 18%;
+  left: -9rem;
+  width: 7rem;
+  height: 2px;
+  opacity: 0;
+  background: linear-gradient(90deg, transparent, rgb(243 207 82 / 60%));
+}
+
+main > section:first-of-type::after {
+  content: "✈";
+  top: calc(18% - 1.1rem);
+  left: -2rem;
+  color: #f3cf52;
+  font-size: 1.8rem;
+  text-shadow: 0 0 10px rgb(243 207 82 / 45%);
+}
+
+main > section:first-of-type > div:last-child {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes wanofii-flight-crossing {
+  0% {
+    opacity: 0;
+    transform: translate(0, 7vh) rotate(-8deg);
+  }
+  8%, 88% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(100vw + 12rem), -3vh) rotate(-8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main > section:first-of-type::before,
+  main > section:first-of-type::after {
+    animation: none;
+    opacity: 0;
+  }
+}
