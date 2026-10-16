@@ -139,7 +139,7 @@ export default function Home() {
 
       <nav className="sticky top-0 z-50 bg-black/90 backdrop-blur flex justify-between items-center p-4">
   <div className="flex items-center gap-2 text-xl font-black">
-    <img src="/wanofii-mark.png" alt="" className="h-12 w-[52px] rounded object-cover" />
+    <img src="/wanofii-mark-transparent.png" alt="Wanofii logo" className="h-12 w-[52px] object-contain" />
     <span>Wanofii</span>
   </div>
 
