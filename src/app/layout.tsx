@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     "وانوفي للسفر",
     "ዋኖፊ ጉዞ",
   ],
+  icons: {
+    icon: "/wanofii-mark-transparent.png",
+    shortcut: "/wanofii-mark-transparent.png",
+    apple: "/wanofii-mark-transparent.png",
+  },
   openGraph: {
     title: "Wanofii - Travel, Visa & Business Services Ajman",
     description: "UAE ↔ Ethiopia specialist - 3000+ Ethiopians trust us",
