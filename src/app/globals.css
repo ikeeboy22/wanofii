@@ -325,3 +325,8 @@ footer {
   background: #f8fafc !important;
   color: #64748b !important;
 }
+
+
+main > section:first-of-type h1 span {
+  background: transparent !important;
+}
